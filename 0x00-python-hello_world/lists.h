@@ -1,25 +1,25 @@
-#ifndef SIMPLE_LIST_H
-#define SIMPLE_LIST_H
+#ifndef LISTS_H
+#define LISTS_H
 
 #include <stdlib.h>
 
 /**
- * struct SimpleNode - Basic building block of a simple list
- * @data: A number that the node holds
- * @next: A link to the next node in the list
+ * struct listint_s - singly linked list
+ * @n: integer
+ * @next: points to the next node
  *
- * Description: This is a simple example of a singly linked list node
- * for learning and educational purposes.
+ * Description: singly linked list node structure
+ * for Holberton project
  */
-typedef struct SimpleNode
+typedef struct listint_s
 {
-	int data;
-	struct SimpleNode *next;
-} SimpleNode_t;
+	int n;
+	struct listint_s *next;
+} listint_t;
 
-size_t print_simple_list(const SimpleNode_t *head);
-SimpleNode_t *add_node_to_simple_list(SimpleNode_t **head, const int data);
-void free_simple_list(SimpleNode_t *head);
-int check_cycle_in_simple_list(SimpleNode_t *list);
+size_t print_listint(const listint_t *h);
+listint_t *add_nodeint(listint_t **head, const int n);
+void free_listint(listint_t *head);
+int check_cycle(listint_t *list);
 
-#endif
+#endif /* LISTS_H */
