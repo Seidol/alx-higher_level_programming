@@ -2,6 +2,6 @@
 import random
 
 number = random.randint(-10, 10)
-s = ["zero", "positive", "negative"]
-r = "{} is {}".format(s[1 + (number > 0) + (number == 0)])
+s = ["negative", "zero", "positive"]
+r = "{} is {}".format(number, s([1 + (number > 0)])
 print(r)
